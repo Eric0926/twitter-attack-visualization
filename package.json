@@ -1,0 +1,23 @@
+{
+	"name": "twitter_attack_visualization",
+	"version": "1.0.0",
+	"description": "Visualization of coordinated attacks against political candidates on Twitter",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server"
+	},
+	"author": "Eric Yang",
+	"license": "MIT",
+	"dependencies": {
+		"config": "^3.3.1",
+		"express": "^4.17.1",
+		"express-validator": "^6.6.1",
+		"gravatar": "^1.8.1",
+		"mongoose": "^5.10.0"
+	},
+	"devDependencies": {
+		"concurrently": "^5.3.0",
+		"nodemon": "^2.0.4"
+	}
+}
