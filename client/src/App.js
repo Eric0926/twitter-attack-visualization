@@ -66,8 +66,10 @@ function App() {
 
 	return (
 		<div className="App">
-			<Container>
+			<div className="search-bar">
 				<SearchBar onSearchChange={onSearchChange} />
+			</div>
+			<Container className="card-list">
 				<CardList data={result} />
 			</Container>
 		</div>

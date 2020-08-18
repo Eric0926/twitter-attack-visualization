@@ -1,8 +1,36 @@
+.wrapper {
+	position: relative;
+}
+
+.wrapper:hover .go-to-twitter {
+	opacity: 1;
+}
+
+.wrapper .go-to-twitter {
+	position: absolute;
+	left: 29%;
+	top: 32%;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: bold;
+	color: #333333;
+	opacity: 0;
+	transition: 0.5;
+}
+
+.wrapper:hover .card-container {
+	opacity: 0.1;
+}
+
 .card-container {
 	width: 900px;
 	height: 250px;
-	margin-top: 20px;
+	margin-top: 30px;
+	box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+	opacity: 1;
+	transition: 0.3s;
 }
+
 .card-container .info-republican {
 	height: 250px;
 	background: linear-gradient(118.11deg, #f38c8c 0%, #f6d8bc 100%);
@@ -12,10 +40,7 @@
 	background: linear-gradient(118.11deg, #8cb5f3 0%, #bce8f6 100%);
 }
 .card-container .stats {
-	height: 250px;
-	border-top: 1px solid #c1c1c1;
-	border-right: 1px solid #c1c1c1;
-	border-bottom: 1px solid #c1c1c1;
+	height: 251px;
 }
 .card-container .avatar {
 	position: absolute;
