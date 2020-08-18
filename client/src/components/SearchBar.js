@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SearchBar.css";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearchChange }) => {
+	const [input, setInput] = useState("");
+
+	const onInputChange = (e) => {
+		setInput(e.target.value);
+		onSearchChange(e.target.value);
+	};
+
 	return (
 		<div className="searchbar-container">
 			<h2 className="heading">Twitter Attacks in Last 6 Hours</h2>
@@ -9,7 +16,9 @@ const SearchBar = () => {
 				<input
 					type="text"
 					id="search-input"
-					placeholder="Search candidates by name, TwitterID or state..."
+					value={input}
+					onChange={onInputChange}
+					placeholder="Search candidates by name, party, state, or TwitterID"
 				/>
 
 				<i className="fa fa-search search-icon" aria-hidden="true" />
