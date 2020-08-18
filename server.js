@@ -1,10 +1,17 @@
-const express = require('express');
+const express = require("express");
+const connectDB = require("./config/db");
 
 const app = express();
 
-//app.use(express.json({ extended: false }));
+// Connect MongoDB
+connectDB();
 
-app.get('/', (req, res) => res.send('API Running'));
+app.use(express.json({ extended: false }));
+
+app.get("/", (req, res) => res.send("API Running"));
+
+// Define Routes
+app.use("/api/trends", require("./routes/api/trends"));
 
 const PORT = process.env.PORT || 5000;
 

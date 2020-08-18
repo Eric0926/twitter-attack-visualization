@@ -1,0 +1,132 @@
+.card-container {
+	width: 900px;
+	height: 250px;
+	margin-top: 20px;
+}
+.card-container .info-republican {
+	height: 250px;
+	background: linear-gradient(118.11deg, #f38c8c 0%, #f6d8bc 100%);
+}
+.card-container .info-democrat {
+	height: 250px;
+	background: linear-gradient(118.11deg, #8cb5f3 0%, #bce8f6 100%);
+}
+.card-container .stats {
+	height: 250px;
+	border-top: 1px solid #c1c1c1;
+	border-right: 1px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;
+}
+.card-container .avatar {
+	position: absolute;
+	left: 10%;
+	top: 10.4%;
+}
+/* Name */
+.card-container .name {
+	position: absolute;
+	left: 10%;
+	top: 35.2%;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 34px;
+	/* identical to box height */
+	color: #000000;
+}
+
+/* Party */
+.card-container .party {
+	position: absolute;
+	left: 10%;
+	top: 52%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 27px;
+	color: #000000;
+}
+
+/* State */
+.card-container .state {
+	position: absolute;
+	left: 10%;
+	top: 66%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 27px;
+	color: #000000;
+}
+
+/* TwitterID */
+.card-container .twitter-id {
+	position: absolute;
+	left: 10%;
+	top: 80%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 27px;
+	color: #000000;
+}
+
+.stats-container .reply {
+	position: absolute;
+	right: 71%;
+	top: 8%;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	color: #000000;
+}
+
+.stats-container .reply-text {
+	position: absolute;
+	left: 38%;
+	top: 10.5%;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 61px;
+	color: #000000;
+}
+
+.stats-container .toxic {
+	position: absolute;
+	right: 71%;
+	top: 38%;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	color: #000000;
+}
+
+.stats-container .toxic-text {
+	position: absolute;
+	left: 38%;
+	top: 42.1%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: #000000;
+}
+
+.stats-container .opposing {
+	position: absolute;
+	right: 71%;
+	top: 63%;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 40px;
+	color: #000000;
+}
+
+.stats-container .opposing-text {
+	position: absolute;
+	left: 38%;
+	top: 66%;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: #000000;
+}
