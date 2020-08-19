@@ -6,7 +6,7 @@ const Card = ({ info }) => {
 	const { name, party, state, twitterID, reply, toxic, opposing } = info;
 
 	return (
-		<a href="http://www.google.com">
+		<a href="http://www.google.com" target="_blank">
 			<div className="wrapper">
 				<Container className="card-container">
 					<Row>
@@ -21,8 +21,8 @@ const Card = ({ info }) => {
 							<img
 								src={
 									party === "Democrat"
-										? require("../assets/imgs/democrat.png")
-										: require("../assets/imgs/republican.png")
+										? require("../../assets/imgs/democrat.png")
+										: require("../../assets/imgs/republican.png")
 								}
 								alt=""
 								className="avatar"

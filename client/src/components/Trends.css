@@ -1,0 +1,13 @@
+.search-bar {
+	position: sticky;
+	background: white;
+	z-index: 1;
+	top: 0;
+	height: 170px;
+}
+
+.card-list {
+	margin-top: 10px;
+	margin-bottom: 50px;
+	z-index: 2;
+}
