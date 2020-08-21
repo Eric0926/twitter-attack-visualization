@@ -6,7 +6,15 @@ const Card = ({ info }) => {
 	const { name, party, state, twitterID, reply, toxic, opposing } = info;
 
 	return (
-		<a href="https://twitter.com/realDonaldTrump" target="_blank">
+		<a
+			href={
+				party === "Democrat"
+					? "https://twitter.com/joebiden"
+					: "https://twitter.com/realDonaldTrump"
+			}
+			target="_blank"
+			rel="noopener noreferrer"
+		>
 			<div className="wrapper">
 				<Container className="card-container">
 					<Row>
