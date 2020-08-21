@@ -6,7 +6,7 @@ const Card = ({ info }) => {
 	const { name, party, state, twitterID, reply, toxic, opposing } = info;
 
 	return (
-		<a href="http://www.google.com" target="_blank">
+		<a href="https://twitter.com/realDonaldTrump" target="_blank">
 			<div className="wrapper">
 				<Container className="card-container">
 					<Row>
