@@ -11,7 +11,7 @@ const SearchBar = ({ onSearchChange }) => {
 
 	return (
 		<div className="searchbar-container">
-			<h2 className="heading">Twitter Attacks in Last 6 Hours</h2>
+			<h2 className="heading">Twitter Activities in Last 6 Hours</h2>
 			<div className="search-container">
 				<input
 					type="text"

@@ -3,11 +3,20 @@
 	background: white;
 	z-index: 1;
 	top: 0;
-	height: 170px;
+	height: 180px;
 }
 
 .card-list {
 	margin-top: 10px;
 	margin-bottom: 50px;
 	z-index: 2;
+}
+
+.effect1 {
+	height: 45px;
+	background: linear-gradient(
+		180deg,
+		#ffffff 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
 }

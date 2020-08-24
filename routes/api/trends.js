@@ -63,7 +63,6 @@ router.get("/", (req, res) => {
 	axios
 		.get("http://34.70.31.164:5000/trends")
 		.then((result) => {
-			console.log(result.data);
 			res.send(result.data);
 		})
 		.catch((err) => {

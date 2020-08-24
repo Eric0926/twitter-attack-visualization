@@ -38,6 +38,7 @@ class Trends extends Component {
 					<SearchBar
 						onSearchChange={this.onSearchChange.bind(this)}
 					/>
+					<div className="effect1"></div>
 				</div>
 				<Container className="card-list">
 					<CardList data={this.props.trends.result} />
