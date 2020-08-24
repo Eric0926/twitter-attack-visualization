@@ -3,14 +3,16 @@ import { Container, Row, Col } from "reactstrap";
 import "./Card.css";
 
 const Card = ({ info }) => {
-	const { name, party, state, twitterID, reply, toxic, opposing } = info;
+	const { name, party, state, twitterID, reply, toxic, retweet } = info;
 
 	return (
 		<a
 			href={
-				party === "Democrat"
-					? "https://twitter.com/joebiden"
-					: "https://twitter.com/realDonaldTrump"
+				twitterID === "none"
+					? party === "Democrat"
+						? "https://twitter.com/joebiden"
+						: "https://twitter.com/realDonaldTrump"
+					: `https://twitter.com/${twitterID}`
 			}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -51,9 +53,9 @@ const Card = ({ info }) => {
 									<div className="toxic-text">are toxic</div>
 								</div>
 								<div>
-									<div className="opposing">{opposing}</div>
+									<div className="opposing">{retweet}</div>
 									<div className="opposing-text">
-										are from opposing party
+										retweets
 									</div>
 								</div>
 							</div>

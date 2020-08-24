@@ -1,3 +1,4 @@
+const axios = require("axios");
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
@@ -58,14 +59,17 @@ router.post(
 // @route  GET api/trends
 // @desc   Get all trends
 // @access Public
-router.get("/", async (req, res) => {
-	try {
-		const trends = await Trend.find();
-		res.json(trends);
-	} catch (err) {
-		console.error(err.message);
-		res.status(500).send("Server Error");
-	}
+router.get("/", (req, res) => {
+	axios
+		.get("http://34.70.31.164:5000/trends")
+		.then((result) => {
+			console.log(result.data);
+			res.send(result.data);
+		})
+		.catch((err) => {
+			console.error(err.message);
+			res.status(500).send("Server Error");
+		});
 });
 
 module.exports = router;
