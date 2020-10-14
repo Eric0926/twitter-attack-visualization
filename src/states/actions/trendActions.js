@@ -4,12 +4,14 @@ import { GET_TRENDS, LOADING_TRENDS, SEARCH_TRENDS } from "./types";
 export const getTrends = () => (dispatch) => {
 	dispatch(setTrendsLoading());
 	axios
-		.get("./api/trends")
-		.then((res) =>
+		.get("./fetchLastHour")
+		.then((res) =>{
+			console.log(res.data.stats);
 			dispatch({
 				type: GET_TRENDS,
-				payload: res.data,
-			})
+				payload: res.data.stats,
+			});
+		}
 		)
 		.catch((err) => console.log(err));
 };

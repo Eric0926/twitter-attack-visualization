@@ -51,10 +51,10 @@
 .card-container .name {
 	position: absolute;
 	left: 10%;
-	top: 35.2%;
+	top: 16.2%;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 26px;
 	line-height: 34px;
 	/* identical to box height */
 	color: #000000;
@@ -64,7 +64,7 @@
 .card-container .party {
 	position: absolute;
 	left: 10%;
-	top: 52%;
+	top: 36%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -76,7 +76,7 @@
 .card-container .state {
 	position: absolute;
 	left: 10%;
-	top: 66%;
+	top: 50%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -85,10 +85,10 @@
 }
 
 /* TwitterID */
-.card-container .twitter-id {
+.card-container .handle {
 	position: absolute;
 	left: 10%;
-	top: 80%;
+	top: 64%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -116,7 +116,7 @@
 	color: #000000;
 }
 
-.stats-container .toxic {
+.stats-container .toxic-reply {
 	position: absolute;
 	right: 71%;
 	top: 38%;
@@ -126,7 +126,7 @@
 	color: #000000;
 }
 
-.stats-container .toxic-text {
+.stats-container .toxic-reply-text {
 	position: absolute;
 	left: 38%;
 	top: 42.1%;

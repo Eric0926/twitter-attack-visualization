@@ -23,7 +23,7 @@ class Trends extends Component {
 					item.name.toLowerCase().match(key) ||
 					item.state.toLowerCase().match(key) ||
 					item.party.toLowerCase().match(key) ||
-					item.twitterID.toLowerCase().match(key)
+					item.handle.toLowerCase().match(key)
 			);
 			this.props.searchTrends(result);
 		} else {

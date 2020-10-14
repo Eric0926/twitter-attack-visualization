@@ -3,16 +3,16 @@ import { Container, Row, Col } from "reactstrap";
 import "./Card.css";
 
 const Card = ({ info }) => {
-	const { name, party, state, twitterID, reply, toxic, retweet } = info;
+	const { name, party, id, state, handle, reply, toxic_reply, retweet, opposing } = info;
 
 	return (
 		<a
 			href={
-				twitterID === "none"
-					? party === "Democrat"
+				handle === "none"
+					? party === "Democratic"
 						? "https://twitter.com/joebiden"
 						: "https://twitter.com/realDonaldTrump"
-					: `https://twitter.com/${twitterID}`
+					: `https://twitter.com/${handle}`
 			}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -23,24 +23,24 @@ const Card = ({ info }) => {
 						<Col
 							xs="4"
 							className={
-								party === "Democrat"
+								party === "Democratic"
 									? "info-democrat"
 									: "info-republican"
 							}
 						>
-							<img
+							{/* <img
 								src={
-									party === "Democrat"
+									party === "Democratic"
 										? require("../../assets/imgs/democrat.png")
 										: require("../../assets/imgs/republican.png")
 								}
 								alt=""
 								className="avatar"
-							/>
+							/> */}
 							<p className="name">{name}</p>
 							<p className="party">{party}</p>
 							<p className="state">{state}</p>
-							<p className="twitter-id">{twitterID}</p>
+							<p className="handle">{handle}</p>
 						</Col>
 						<Col xs="8" className="stats">
 							<div className="stats-container">
@@ -49,13 +49,13 @@ const Card = ({ info }) => {
 									<div className="reply-text">replies</div>
 								</div>
 								<div>
-									<div className="toxic">{toxic}</div>
-									<div className="toxic-text">are toxic</div>
+									<div className="toxic-reply">{toxic_reply}</div>
+									<div className="toxic-reply-text">are toxic</div>
 								</div>
 								<div>
-									<div className="opposing">{retweet}</div>
+									<div className="opposing">{opposing}</div>
 									<div className="opposing-text">
-										retweets
+										are from opposing party
 									</div>
 								</div>
 							</div>
