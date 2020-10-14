@@ -6,7 +6,6 @@ export const getTrends = () => (dispatch) => {
 	axios
 		.get("./fetchLastHour")
 		.then((res) =>{
-			console.log(res.data.stats);
 			dispatch({
 				type: GET_TRENDS,
 				payload: res.data.stats,

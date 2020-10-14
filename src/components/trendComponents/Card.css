@@ -2,20 +2,34 @@
 	position: relative;
 }
 
-.wrapper:hover .go-to-twitter {
+.wrapper:hover .link-block {
+	opacity: 0.3;
+}
+
+.wrapper .link-block {
+	position: absolute;
+	width: 450px;
+	height: 250px;
+	left: 105px;
+	top: 0%;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.wrapper .link-block:hover {
 	opacity: 1;
 }
 
-.wrapper .go-to-twitter {
+.wrapper .link-block .link-block-text {
 	position: absolute;
-	left: 29%;
-	top: 32%;
-	font-size: 50px;
+	text-align: center;
+	left: 150px;
+	top: 90px;
+	font-size: 45px;
 	font-style: normal;
 	font-weight: bold;
 	color: #333333;
-	opacity: 0;
-	transition: 0.5;
+	opacity: 1;
 }
 
 .wrapper:hover .card-container {

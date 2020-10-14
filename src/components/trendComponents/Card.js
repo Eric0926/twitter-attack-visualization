@@ -1,22 +1,26 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./Card.css";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
-const Card = ({ info }) => {
-	const { name, party, id, state, handle, reply, toxic_reply, retweet, opposing } = info;
+import { setDashboard } from "../../states/actions/dashboardActions";
 
-	return (
-		<a
-			href={
-				handle === "none"
-					? party === "Democratic"
-						? "https://twitter.com/joebiden"
-						: "https://twitter.com/realDonaldTrump"
-					: `https://twitter.com/${handle}`
-			}
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+class Card extends React.Component {
+
+	onClick = () => {
+		const payload = {
+			flag: true,
+			info: this.props.info
+		}
+		this.props.setDashboard(payload);
+	}
+
+	render() {
+
+		const { name, party, id, state, handle, reply, toxic_reply, retweet, opposing } = this.props.info;
+
+		return (
 			<div className="wrapper">
 				<Container className="card-container">
 					<Row>
@@ -28,15 +32,6 @@ const Card = ({ info }) => {
 									: "info-republican"
 							}
 						>
-							{/* <img
-								src={
-									party === "Democratic"
-										? require("../../assets/imgs/democrat.png")
-										: require("../../assets/imgs/republican.png")
-								}
-								alt=""
-								className="avatar"
-							/> */}
 							<p className="name">{name}</p>
 							<p className="party">{party}</p>
 							<p className="state">{state}</p>
@@ -62,10 +57,35 @@ const Card = ({ info }) => {
 						</Col>
 					</Row>
 				</Container>
-				<p className="go-to-twitter">Check Twitter Profile</p>
+				<a
+					href={
+						handle === "none"
+							? party === "Democratic"
+								? "https://twitter.com/joebiden"
+								: "https://twitter.com/realDonaldTrump"
+							: `https://twitter.com/${handle}`
+					}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<div className="link-block">
+						<div className="link-block-text">
+							Twitter
+						</div>
+					</div>
+				</a>
+				<div className="link-block" style={{"left":"555px", "cursor":"pointer"}} onClick={this.onClick}>
+					<div className="link-block-text" style={{"left": "100px"}}>
+						Dashboard
+					</div>
+				</div>
 			</div>
-		</a>
-	);
+		);
+	} 
 };
 
-export default Card;
+Card.propTypes = {
+	setDashboard: PropTypes.func.isRequired,
+}
+
+export default connect(null, { setDashboard })(Card);
