@@ -59,11 +59,7 @@ class Card extends React.Component {
 				</Container>
 				<a
 					href={
-						handle === "none"
-							? party === "Democratic"
-								? "https://twitter.com/joebiden"
-								: "https://twitter.com/realDonaldTrump"
-							: `https://twitter.com/${handle}`
+						`https://twitter.com/${handle}`
 					}
 					target="_blank"
 					rel="noopener noreferrer"

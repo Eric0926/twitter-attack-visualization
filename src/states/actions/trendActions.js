@@ -5,12 +5,11 @@ export const getTrends = () => (dispatch) => {
 	dispatch(setTrendsLoading());
 	axios
 		.get("./fetchLastHour")
-		.then((res) =>{
+		.then((res) =>
 			dispatch({
 				type: GET_TRENDS,
 				payload: res.data.stats,
-			});
-		}
+			})
 		)
 		.catch((err) => console.log(err));
 };

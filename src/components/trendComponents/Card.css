@@ -78,7 +78,7 @@
 .card-container .party {
 	position: absolute;
 	left: 10%;
-	top: 36%;
+	top: 45%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -90,7 +90,7 @@
 .card-container .state {
 	position: absolute;
 	left: 10%;
-	top: 50%;
+	top: 59%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -102,7 +102,7 @@
 .card-container .handle {
 	position: absolute;
 	left: 10%;
-	top: 64%;
+	top: 73%;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
